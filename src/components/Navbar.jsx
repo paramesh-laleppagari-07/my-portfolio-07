@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import logo from "../assets/logo.png";  // adjust path if needed
+
+
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +15,8 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="logo">
-        <img src="/src/assets/logo.png" alt="Logo" />
+        {/* <img src="/src/assets/logo.png" alt="Logo" /> */}
+        <img src={logo} alt="Logo" />
         <span>L</span>aleppagari <span>P</span>aramesh
       </div>
 

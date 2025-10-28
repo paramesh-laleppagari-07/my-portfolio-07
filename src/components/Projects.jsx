@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Projects.css";
 
+// ✅ Correct Image Imports
 import libraryImg from "../assets/library.png";
 import sentimentImg from "../assets/sentiment.png";
 import chatbotImg from "../assets/chatbot.png";
@@ -34,7 +35,7 @@ const projectsData = [
       "Built an AI ChatBot capable of contextual conversations using LangChain and Hugging Face. Integrated FAISS for document retrieval and deployed via Streamlit.",
     tech: "Python, LangChain, Hugging Face, FAISS, Streamlit",
     image: chatbotImg,
-    live: "soon",
+    live: "#", // Changed from "soon" to "#"
     github: "https://github.com/paramesh-laleppagari-07/GenAIChatBot.git",
   },
   {
@@ -72,6 +73,9 @@ const projectsData = [
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
+  //  Force bundle chatbot image (for Render safety)
+  console.log(chatbotImg);
+
   return (
     <section id="projects" className="projects-section">
       <h2 className="section-title">My Projects</h2>
@@ -80,7 +84,11 @@ const Projects = () => {
         {projectsData.map((project, index) => (
           <div key={index} className="project-card">
             <h3 className="project-name">{project.name}</h3>
-            <img src={project.image} alt={project.name} className="project-img" />
+            <img
+              src={project.image}
+              alt={project.name}
+              className="project-img"
+            />
             <button
               className="btn view-btn"
               onClick={() => setSelectedProject(project)}
@@ -93,12 +101,18 @@ const Projects = () => {
 
       {/* Modal Popup */}
       {selectedProject && (
-        <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
+        <div
+          className="modal-overlay"
+          onClick={() => setSelectedProject(null)}
+        >
           <div
             className="modal-content"
             onClick={(e) => e.stopPropagation()}
           >
-            <span className="close-btn" onClick={() => setSelectedProject(null)}>
+            <span
+              className="close-btn"
+              onClick={() => setSelectedProject(null)}
+            >
               ✕
             </span>
             <h2>{selectedProject.name}</h2>
@@ -106,8 +120,11 @@ const Projects = () => {
             <p className="modal-tech">
               <strong>Technologies Used:</strong> {selectedProject.tech}
             </p>
+
             <div className="modal-buttons">
-              {selectedProject.live !== "soon" && selectedProject.live !== "#" && (
+              {selectedProject.live === "#" ? (
+                <span className="coming-soon">Coming Soon</span>
+              ) : (
                 <a
                   href={selectedProject.live}
                   target="_blank"
@@ -117,6 +134,7 @@ const Projects = () => {
                   Live Demo
                 </a>
               )}
+
               <a
                 href={selectedProject.github}
                 target="_blank"
