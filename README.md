@@ -139,13 +139,13 @@ Displays my **major projects** with a modern slide view and modal details: with 
 | Home Page | ![Home Screenshot](./src/assets/screenshots/home.png) |
 | About Page | ![About Screenshot](./src/assets/screenshots/about.png) |
 | Projects | ![Projects Screenshot](./src/assets/screenshots/projects.png) |
-| Contact Page | ![Contact Screenshot](./src/assets/screenshots/contact.png) |
+| Contact Page | ![Contact Screenshot](./src/assets/screenshots/contacts.png) |
 
 # ----------------------------------------------------------------------------------------------
 ##  Deployment
 
 This project is hosted live on **Render**.  
-👉 **Live Demo:** [](https://paramesh-portfolio.onrender.com)
+👉 **Live Demo:** []()
 
 ---
 
@@ -166,7 +166,7 @@ It’s more than just a website — it’s my digital identity.
 
 
 
-## default content from react +vite 
+### default content from react +vite 
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
