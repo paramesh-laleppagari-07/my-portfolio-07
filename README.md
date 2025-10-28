@@ -145,7 +145,7 @@ Displays my **major projects** with a modern slide view and modal details: with 
 ##  Deployment
 
 This project is hosted live on **Render**.  
-👉 **Live Demo:** []()
+👉 **Live Demo:** [https://my-self-paramesh-07.onrender.com/](https://my-self-paramesh-07.onrender.com/)
 
 ---
 
